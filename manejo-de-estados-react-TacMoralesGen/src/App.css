@@ -1,0 +1,127 @@
+:root {
+  --bhue: 193;
+  --bsat: 71%;
+  --blight: 67%;
+  --b: hsl(var(--bhue), var(--bsat), var(--blight));
+
+  --yhue: 55;
+  --ysat: 68%;
+  --ylight: 68%;
+  --y: hsl(var(--yhue), var(--ysat), var(--ylight));
+
+  --phue: 261;
+  --psat: 32%;
+  --plight: 63%;
+  --p: hsl(var(--phue), var(--psat), var(--plight));
+
+  --dark: #242424;
+  --white: rgba(255, 255, 255, 0.9);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--white);
+  background-color: var(--dark);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+
+  @media screen and (min-width: 768px){
+    padding: 2rem;
+  }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: .1rem 0 1rem 0;
+  @media screen and (min-width: 768px){
+    margin: 1rem;
+  }
+}
+
+h2{
+  font-size: 2.8em;
+  line-height: 1.1;
+  margin: .1rem;
+  @media screen and (min-width: 768px){
+    margin: 1rem;
+  }
+}
+
+
+.logo {
+  height: 6em;
+  padding: 0;
+  will-change: filter;
+  transition: filter 300ms;
+  
+  @media screen and (min-width: 768px){
+    padding: 1.5em;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 0 2em hsla(var(--yhue), var(--ysat), var(--ylight), 0.8));
+  }
+}
+
+section {
+  padding: 0.5rem;
+  @media screen and (min-width: 768px){
+    padding: 1.5em;
+  }
+}
+
+button {
+  margin-inline: 1rem;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s;
+  border: 5px solid var(--dark);
+
+  &.btn-minus {
+    background-color: var(--y);
+    &:hover {
+      border-color: hsl(calc(var(--yhue)), calc(var(--ysat) + 70%), var(--ylight));
+    }
+  }
+
+  &.btn-random {
+    background-color: var(--b);
+    &:hover {
+      border-color: hsl( calc(var(--bhue) + 25) , var(--bsat), var(--blight));
+
+    }
+  }
+
+  &.btn-add {
+    background-color: var(--p);
+    &:hover {
+      border-color: hsl(var(--phue), calc(var(--psat) + 60%), var(--plight));
+    }
+  }
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  & button{
+    flex: 1 1 0px;
+  }
+
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+  }
+}
+
+.contador{
+  color: var(--y);
+}

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+
+
+/* Estilo individual para cada card */
+.card {
+  font-family: "Lexend Exa", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  width: 300px; /* Ancho de cada tarjeta */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.card:hover {
+  transform: translateY(-5px); /* Elevación al pasar el ratón */
+}
+
+/* Imagen de cada card */
+.card img {
+  height: 300px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Contenedor de la información dentro de la card */
+.card .container {
+  padding: 15px;
+}
+
+.card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}

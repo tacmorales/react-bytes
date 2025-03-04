@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
+body{
+    background-color:lightseagreen;
+}
+
+/* Estilos generales para el contenedor de las cards */
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    /* Espacio entre las cards */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    /* Ancho máximo del contenedor */
+}
+
+h1{
+    text-align: center;
+    font-family: "Barrio", serif;
+    font-weight: 400;
+    font-style: normal;
+}
